@@ -1,0 +1,23 @@
+@import '../shared.scss';
+@import './src/variables.scss';
+
+.#{$component} {
+  padding: 4rem 0;
+  background-color: $footer-bg;
+  text-align: center;
+
+  @include mediaquery(sm) {
+    text-align: left;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-white;
+    font-size: 14px;
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+}

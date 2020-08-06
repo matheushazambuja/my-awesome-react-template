@@ -1,0 +1,28 @@
+@import '../shared.scss';
+@import './src/variables';
+
+.#{$component} {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-lighten-2;
+  padding: $gutter-12 $gutter-24;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    max-width: 50px;
+  }
+
+  &__search {
+    max-width: 100%;
+
+    @include mediaquery(sm) {
+      max-width: 600px;
+    }
+  }
+}

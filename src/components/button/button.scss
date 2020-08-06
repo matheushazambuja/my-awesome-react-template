@@ -1,0 +1,75 @@
+@import '../shared.scss';
+@import './src/variables.scss';
+
+.#{$component} {
+  background-color: transparent;
+  border: none;
+  border-radius: $border-radius;
+  color: $color-primary;
+  cursor: pointer;
+  font-weight: normal;
+  outline: none;
+  padding: 5px 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all $transition-delay-default;
+
+  &--primary-fill {
+    color: $color-white;
+    background-color: $color-primary;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      background-color: $color-primary-hover;
+      box-shadow: $color-box-shadow 0 2px 9px;
+    }
+  }
+  &--primary {
+    color: $color-primary;
+    border: 1px solid $color-primary;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      background-color: $color-lighten;
+      color: $color-black;
+      border-color: $color-black;
+    }
+
+    &.has-previous-icon {
+      &:hover {
+        &::before {
+          color: $color-black;
+        }
+      }
+      &::before {
+        content: '\25C0';
+        position: relative;
+        color: $color-primary;
+      }
+    }
+  }
+
+  &--black-circle {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    background-color: #131313;
+    color: $color-white;
+    border-radius: 100%;
+
+    i {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 7px;
+      vertical-align: middle;
+    }
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      background-color: rgba(19, 19, 19, 0.95);
+    }
+  }
+}
