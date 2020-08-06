@@ -1,0 +1,12 @@
+@import '@styles/variables.scss';
+
+$components-prefix: 'c-homepage';
+
+.#{$components-prefix}-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 76px;
+  background-color: $color-primary;
+  background-position: center center;
+}
